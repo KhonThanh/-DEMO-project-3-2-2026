@@ -1,21 +1,19 @@
-@ -1,2126 +0,0 @@
 /* css base */
 :root {
-    --primary-color: #6791C3;
-    --secondary-color: #006FBB;
+    --primary-color: #006f46;
+    --cart-color-item: #fd6506;
     --white-color: #FEFEFE;
-    --green-color: #37BDB8;
-    --white-background-color: #F9F8FD;
-    --white-background-second-color: #EDF1F4;
+    --white-gray: #f5f5f5;
+    --white-gray-second: #ededed;
+    --red-color: #ff0000;
+    --red-color-second: #e10600;
     --black-color: #1E152A;
-    --gray-color: #D9D9D9;
-    --error-color: #e53935;
-    --active-color: #FFCC00;
-    --gray-blue-color: #F1F8FF;
+    --line-footer-top: #282828;
+    --line-footer-bottom: #acacac;
+    --header-padding: 18px;
     --header-h: 64px;
     --footer-h: 80px;
     --gap: 20px;
-
     --font-size-base: 16px;
     --font-roboto: 'Roboto', Arial, sans-serif;
     --font-dancing: 'Dancing Script', cursive;
@@ -212,7 +210,7 @@ p {
 }
 
 .bg-white {
-    background-color: var(--white-background-color);
+    background-color: var(--white-color);
 }
 
 .bg-white-second {
@@ -229,6 +227,10 @@ p {
 
 .bg-red {
     background-color: var(--error-color);
+}
+
+.header-top__padding {
+    padding: var(--header-padding) 0px;
 }
 
 .text-color-white {
@@ -426,8 +428,43 @@ p {
 
 /* css custom */
 /* css header */
-.header-top {
-    padding: 10px 0px;
+
+.help-header img,
+.catagories-header svg {
+    min-width: 17px;
+    aspect-ratio: 1 / 1;
+}
+
+.catagories-header svg {
+    fill: var(--primary-color);
+}
+
+.help-header img {
+    max-width: 17px;
+}
+
+.catagories-header p {
+    white-space: nowrap;
+}
+
+.header-action__badge {
+    top: -8px;
+    right: -10px;
+    line-height: 23px;
+    margin: 0;
+    background-color: var(--white-color);
+    color: var(--cart-color-item);
+    min-width: 23px;
+    min-height: 23px;
+    border-radius: 50px;
+}
+
+.header-action__link svg {
+    fill: var(--white-color);
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    top: 2px;
 }
 
 .logo img {
@@ -436,6 +473,18 @@ p {
     width: 100%;
     height: auto;
 }
+
+.header__search {}
+
+.search-box {}
+
+.search-box__input-wrap {}
+
+.search-box__icon {}
+
+.search-box__btn {}
+
+.icon-search {}
 
 .user-login a img {
     max-height: 20px;
