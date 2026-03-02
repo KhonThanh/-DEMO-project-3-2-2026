@@ -14,7 +14,101 @@
 </head>
 
 <body>
-    <header class=" " data-include="../component/header.html"></header>
+    <header class=" ">
+        <div class="topbar container-f bg-black" data-include="../component/marquee.html"></div>
+        <div class="header-desktop" data-include="../component/header.html"></div>
+        <div class="header-mobile container-f">
+            <div class="mobile-header flex center-ver jus-content">
+                <div class="mobile-left flex center-ver gap-20">
+                    <button class="mobile-menu-btn cursor-pointer">
+                        <img src="./img/icon/menu-icon.svg" alt="">
+                    </button>
+
+                    <button class="mobile-search-btn cursor-pointer">
+                        <img src="./img/icon/search-icon__black.svg" alt="">
+                    </button>
+                </div>
+                <a href="../index.html" class="mobile-logo">
+                    <img src="./img/logo/CH_XUYEN_BANG-09_32x32.webp" alt="">
+                </a>
+                <div class="mobile-right flex center-ver gap-20">
+                    <a href="#">
+                        <img src="./img/icon/user-icon__black.svg" alt="">
+                    </a>
+                    <a href="#" class="pos-rel">
+                        <img src="./img/icon/cart-icon__black.svg" alt="">
+                        <span class="header-action__badge pos-abs text-center">0</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="mobile-overlay pos-fixed"></div>
+
+            <!-- MOBILE MENU -->
+            <div class="mobile-drawer mobile-menu">
+                <div class="mobile-drawer__header flex jus-content center-ver">
+                    <div class="tabs">
+                        <span class="active">Menu</span>
+                        <span>Categories</span>
+                    </div>
+                    <button class="drawer-close">✕</button>
+                </div>
+
+                <div class="mobile-drawer__body">
+                    <ul class="mobile-menu__list">
+                        <li>Snacks</li>
+                        <li>Frozen</li>
+                        <li>Dry Goods</li>
+                        <li>Fresh Fruits</li>
+                        <li>Instant Foods</li>
+                        <li>Sauces & Dips</li>
+                        <li>Coffee & Drinks</li>
+                        <li>Frozen Seafood</li>
+                        <li>Specialty Foods</li>
+                        <li class="has-arrow">Nail Supplies</li>
+                    </ul>
+
+                    <div class="mobile-menu__bottom">
+                        <p>Sign In</p>
+                        <p>Create an account</p>
+                        <p>My wish list</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE SEARCH -->
+            <div class="mobile-drawer mobile-search">
+                <div class="mobile-drawer__header flex jus-content center-ver">
+                    <h3>Search</h3>
+                    <button class="drawer-close">✕</button>
+                </div>
+
+                <div class="mobile-drawer__body">
+                    <div class="search-input flex center-ver">
+                        <input type="text" placeholder="Search products...">
+                        <button>
+                            <img src="./img/icon/search-icon__black.svg" alt="">
+                        </button>
+                    </div>
+
+                    <h4 class="popular-title">POPULAR PRODUCTS</h4>
+
+                    <div class="popular-products flex gap-20">
+                        <div class="product">
+                            <img src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <p>Example Product Title</p>
+                            <strong>$19.99</strong>
+                        </div>
+                        <div class="product">
+                            <img src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <p>Example Product Title</p>
+                            <strong>$19.99</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="container-f flex flex-col center-hor pos-rel">
         <section class="home-hero container-f bg-white-gray hero-padding">
             <div class="container-m flex flex-col gap-20">

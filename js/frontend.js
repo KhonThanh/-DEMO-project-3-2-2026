@@ -733,6 +733,8 @@ function initFormValidation(root = document) {
   });
 }
 
+
+
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -826,6 +828,77 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       }
     });
+    initToggleSystem([
+      // ===== MOBILE MENU =====
+      {
+        trigger: ".mobile-menu-btn",
+        target: ".mobile-menu",
+        activeClass: "active",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        innerSelector: ".mobile-drawer__body",
+        closeBtn: ".mobile-menu .drawer-close",
+
+        onActiveChange: function (isActive) {
+          const overlay = document.querySelector(".mobile-overlay");
+          const search = document.querySelector(".mobile-search");
+
+          if (isActive) {
+            search.classList.remove("active"); // đóng search nếu đang mở
+            overlay.classList.add("active");
+          } else {
+            const anyDrawerOpen =
+              document.querySelector(".mobile-menu.active") ||
+              document.querySelector(".mobile-search.active");
+
+            if (!anyDrawerOpen) {
+              overlay.classList.remove("active");
+            }
+          }
+        }
+      },
+
+      // ===== MOBILE SEARCH =====
+      {
+        trigger: ".mobile-search-btn",
+        target: ".mobile-search",
+        activeClass: "active",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        innerSelector: ".mobile-drawer__body",
+        closeBtn: ".mobile-search .drawer-close",
+
+        onActiveChange: function (isActive) {
+          const overlay = document.querySelector(".mobile-overlay");
+          const menu = document.querySelector(".mobile-menu");
+
+          if (isActive) {
+            menu.classList.remove("active"); // đóng menu nếu đang mở
+            overlay.classList.add("active");
+          } else {
+            const anyDrawerOpen =
+              document.querySelector(".mobile-menu.active") ||
+              document.querySelector(".mobile-search.active");
+
+            if (!anyDrawerOpen) {
+              overlay.classList.remove("active");
+            }
+          }
+        }
+      },
+
+      // ===== OVERLAY CLICK =====
+      {
+        trigger: ".mobile-overlay",
+        activeClass: "active",
+
+        onToggle: function () {
+          document.querySelector(".mobile-menu").classList.remove("active");
+          document.querySelector(".mobile-search").classList.remove("active");
+          document.querySelector(".mobile-overlay").classList.remove("active");
+        }
+      }
+    ]);
 
   });
 });
