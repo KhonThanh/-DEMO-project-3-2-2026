@@ -1,37 +1,41 @@
 // ----------- Vùng chức năng -------------
 // 🧩 1️⃣ Include HTML Components
-function includeHTML(callback) {
+async function includeHTML(callback) {
   const elements = document.querySelectorAll("[data-include]");
   if (!elements.length) {
     if (callback) callback();
     return;
   }
 
-  let loaded = 0;
-
-  Promise.all([...elements].map(async (el) => {
+  for (const el of elements) {
     const file = el.getAttribute("data-include");
-    if (!file) return;
+    if (!file) continue;
 
-    const cacheKey = `comp-${file}`;
-    let html = sessionStorage.getItem(cacheKey);
+    try {
+      const cacheKey = `comp-${file}`;
+      let html = sessionStorage.getItem(cacheKey);
 
-    if (!html) {
-      const res = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
-      html = await res.text();
-      sessionStorage.setItem(cacheKey, html);
+      if (!html) {
+        const res = await fetch(file, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Failed: ${file}`);
+        html = await res.text();
+        sessionStorage.setItem(cacheKey, html);
+      }
+
+      el.innerHTML = html;
+
+      if (typeof initResponsive === "function") {
+        initResponsive(el);
+      }
+
+    } catch (err) {
+      console.error("Include error:", file, err);
     }
+  }
 
-    el.innerHTML = html;
-    if (typeof initResponsive === "function") initResponsive(el);
-
-    if (++loaded === elements.length) {
-      document.dispatchEvent(new Event("includesLoaded"));
-      if (callback) callback();
-    }
-  }));
+  document.dispatchEvent(new Event("includesLoaded"));
+  if (callback) callback();
 }
-
 // js thêm active
 function initToggleSystem(configs = []) {
   if (!window._toggleSystemState) {
@@ -732,7 +736,7 @@ function initFormValidation(root = document) {
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
-    
+
     generateHeadingLinks({
       contentSelector: ".blog-content",
       outputSelector: ".table-heading__body ul",
