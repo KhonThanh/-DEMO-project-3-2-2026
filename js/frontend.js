@@ -736,7 +736,6 @@ function initFormValidation(root = document) {
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
-    initRevealEffect();
     generateHeadingLinks({
       contentSelector: ".blog-content",
       outputSelector: ".table-heading__body ul",
@@ -750,12 +749,86 @@ document.addEventListener("DOMContentLoaded", () => {
 
     enableHorizontalSwipe(".product-container", 1);
     enableHorizontalSwipe(".product-container__mb", 1.2);
-
     applyImageEnhancements();
     initRevealEffect();
+    initSlickSlider({
+      mainSelector: ".hotdeal-section__slider",
+      prevBtnSelector: ".hotdeal-section .slider-prev",
+      nextBtnSelector: ".hotdeal-section .slider-next",
+      minSlides: 10,
+      mainOptions: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: { slidesToShow: 4 }
+          },
+          {
+            breakpoint: 992,
+            settings: { slidesToShow: 3 }
+          },
+          {
+            breakpoint: 576,
+            settings: { slidesToShow: 2 }
+          }
+        ]
+      }
+    });
+    initSlickSlider({
+      mainSelector: ".nail-slider-wrapper",
+      prevBtnSelector: ".nail-prev",
+      nextBtnSelector: ".nail-next",
+      minSlides: 6,
+      mainOptions: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: { slidesToShow: 4 }
+          },
+          {
+            breakpoint: 992,
+            settings: { slidesToShow: 2 }
+          },
+        ]
+      }
+    });
+    initSlickSlider({
+      mainSelector: ".best-seller-slider",
+      minSlides: 10,
+      mainOptions: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: { slidesToShow: 4 }
+          },
+          {
+            breakpoint: 992,
+            settings: { slidesToShow: 3 }
+          },
+          {
+            breakpoint: 576,
+            settings: { slidesToShow: 2 }
+          }
+        ]
+      }
+    });
+
   });
 });
-
 // 🔁 Cập nhật khi include hoặc slick load lại
 document.addEventListener("includesLoaded", () => applyImageEnhancements());
 $(document).on("init reInit afterChange", ".slick-slider", function () {
