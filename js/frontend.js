@@ -732,8 +732,7 @@ function initFormValidation(root = document) {
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
-
-    // 📚 1️⃣ MỤC LỤC & MENU LIÊN KẾT
+    
     generateHeadingLinks({
       contentSelector: ".blog-content",
       outputSelector: ".table-heading__body ul",
@@ -745,164 +744,11 @@ document.addEventListener("DOMContentLoaded", () => {
       linkSelector: ".menu-shortcut__container .intro-banner__shortcut"
     });
 
-    // 🧭 2️⃣ SWIPE NGANG / DRAG TAB
     enableHorizontalSwipe(".product-container", 1);
     enableHorizontalSwipe(".product-container__mb", 1.2);
 
-    // 🎞️ 3️⃣ SLICK SLIDER CÁC PHẦN
-
-    // 🟢 Slide banner chính
-    initSlickSlider({
-      mainSelector: '.slide-container',
-      minSlides: 3,
-      mainOptions: {
-        infinite: true,
-        autoplay: true,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: false,
-        appendDots: $('.custom-dots')
-      }
-    });
-
-    // 🟣 Feedback slide
-    initSlickSlider({
-      mainSelector: '.feedback-item__container',
-      mainOptions: {
-        infinite: true,
-        autoplay: true,
-        dots: false,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: false
-      }
-    });
-
-    // 🟡 Intro slide chạy ngang
-    initSlickSlider({
-      mainSelector: '.intro-slide',
-      minSlides: 6,
-      mainOptions: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 4000,
-        cssEase: 'linear',
-        arrows: false,
-        dots: false,
-        infinite: true,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        variableWidth: true
-      }
-    });
-
-    // 🟡 roll to the top
-    initScrollToTop();
-
-    // 🔵 Popup gallery (for–nav)
-    initSlickSlider({
-      mainSelector: ".gallery-slider-for",
-      navSelector: ".gallery-slider-nav",
-      popupSelector: ".gallery-section",
-      triggerSelector: ".intro-slide__img img, .intro-slide__folderImage img",
-      closeBtnSelector: ".gallery-section .btn-close",
-      prevBtnSelector: ".gallery-section .btn-prev",
-      nextBtnSelector: ".gallery-section .btn-next",
-      minSlides: 9,
-      mainOptions: {
-        speed: 500
-      },
-      navOptions: {
-        variableWidth: true
-      }
-    });
-
-    // gallery hình ảnh sản phẩm
-    initProductGallery({
-      containerSelector: ".product-container__image",
-      mainSelector: ".product-image > img",
-      thumbSelector: ".product-image__item img"
-    });
-    // ✨ 4️⃣ HIỆU ỨNG ẢNH & REVEAL
     applyImageEnhancements();
     initRevealEffect();
-
-    // THỰC THI ADD ACTIVE VÀO VÙNG CẦN
-    initToggleSystem([
-      {
-        trigger: ".btn-submit-review",
-        target: "#popupReview",
-        closeBtn: "#popupReview .btn-close, #popupReview .popup-close",
-        closeOnOutside: true,
-        closeOnEsc: true,
-        behavior: "toggle"
-      },
-      {
-        trigger: ".rate-btn",
-        behavior: "activate",
-        activeClass: "active",
-      },
-      {
-        trigger: ".pagination-btn__custom",
-        behavior: "activate",
-        activeClass: "active",
-      },
-      {
-        trigger: ".btn-buy",
-        target: ".modal-section",
-        activeClass: "active",
-        closeBtn: ".modal-close, .modal-section .btn-custom-fit:first-child",
-        closeOnOutside: true,
-        closeOnEsc: true,
-        innerSelector: ".modal-container"
-      },
-      {
-        trigger: ".product-tabs .tab-btn",
-        target: ".product-tabs .tab-content",
-        behavior: "activate"
-      },
-      {
-        trigger: ".accordion-header",
-        behavior: "activate",
-        groupSelector: ".accordion-item",
-        activeClass: "active",
-        onActiveChange: function (isActive, trigger) {
-          const item = trigger.closest(".accordion-item");
-          if (!item) return;
-
-          if (isActive) item.classList.add("active");
-          else item.classList.remove("active");
-        }
-      },
-      {
-        trigger: ".js-faq-trigger",
-        target: ".js-faq-target",
-        activeClass: "active",
-        behavior: "activate",
-        closeOnOutside: true,
-        onActiveChange: function (isActive, trigger, target) {
-          // nếu đang active mà bấm lại chính nó → đóng
-          if (isActive && trigger._justClicked) {
-            trigger.classList.remove("active");
-            target && target.classList.remove("active");
-          }
-
-          trigger._justClicked = true;
-          setTimeout(() => trigger._justClicked = false, 0);
-        }
-      }
-    ]);
-    // thực thi bật tắt menu
-    toggleMenu('.menu-container__bar', '.m-menu');
-    initMobileMenuSimple();
-    runCoreProgress();
-    initHorizontalDragScroll();
-    initFormValidation();
   });
 });
 
