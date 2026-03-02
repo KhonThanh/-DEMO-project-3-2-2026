@@ -736,7 +736,7 @@ function initFormValidation(root = document) {
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
-
+    initRevealEffect();
     generateHeadingLinks({
       contentSelector: ".blog-content",
       outputSelector: ".table-heading__body ul",
