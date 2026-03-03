@@ -956,6 +956,17 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: ".Quantity-check__item",
         activeClass: "active",
         behavior: "activate"
+      },
+      {
+        trigger: ".btn-quick-view",
+        target: ".quickview-popup",
+        activeClass: "active",
+        behavior: "toggle",
+        closeOnOutside: true,
+        overlayCloses: true,
+        closeOnEsc: true,
+        innerSelector: ".quickview-inner",
+        closeBtn: ".btn-close",
       }
     ]);
 
@@ -973,7 +984,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mainSelector: ".quickview-main",
       navSelector: ".quickview-thumbs",
 
-      minSlides: 6, 
+      minSlides: 6,
 
       mainOptions: {
         arrows: false,
@@ -985,7 +996,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesToShow: 3,
         focusOnSelect: true,
         centerMode: true,
-        arrows:true,
+        arrows: true,
 
       }
     });
