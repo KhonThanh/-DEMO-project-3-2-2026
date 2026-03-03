@@ -3,6 +3,7 @@
     --primary-color: #006f46;
     --cart-color-item: #fd6506;
     --white-color: #FEFEFE;
+    --light-dark: #999999;
     --white-gray: #f5f5f5;
     --white-gray-second: #ededed;
     --light-black: #d5d5d5;
@@ -285,6 +286,10 @@ p {
 
 .container-padding {
     padding: 60px 0px;
+}
+
+.container-full-view {
+    height: 100vh;
 }
 
 .jus-content {
@@ -907,7 +912,7 @@ p {
     outline: none;
 }
 
-.search-input button{
+.search-input button {
     max-width: 16px;
     aspect-ratio: 1 / 1;
     border: transparent;
@@ -1025,18 +1030,38 @@ p {
     filter: brightness(1.1);
 }
 
+/* css contact */
+.contact-title {
+    font-size: calc(var(--font-size-base) + 4px);
+}
+
+.contact-desc {
+    font-size: var(--font-size-base);
+}
+
+.btn-submit {
+    padding: 12px 15px;
+    min-width: 227px;
+    border: transparent;
+}
 
 /* css nav bar */
 .nav-bar__container {
     justify-content: left;
     padding: 20px 0px;
     gap: 10px;
+    border-bottom: 1px solid var(--light-dark);
 }
 
 .nav-bar__item {
-    font-size: var(--font-size-base);
-    text-decoration: underline;
+    font-size: calc(var(--font-size-base) - 2px);
     text-transform: capitalize;
+    color: var(--light-dark);
+    transition: all 0.6s ease;
+}
+
+.nav-bar__item:hover {
+    color: var(--black-color);
 }
 
 .nav-bar__item:not(:last-child)::after {
@@ -1045,7 +1070,7 @@ p {
     aspect-ratio: 1 / 1;
     width: 10px;
     height: auto;
-    margin-left: 10px;
+    margin: 0px 10px;
     background-image: url(../../img/icon/chevron-right.svg);
     background-position: center;
     background-size: contain;
@@ -1109,6 +1134,19 @@ p {
 
 .form-group {
     position: relative;
+}
+
+.form-group label{
+    font-size: calc(var(--font-size-base) - 2px);
+}
+
+.form-group input::placeholder {
+    opacity: 0.4;
+}
+
+.form-group textarea {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .form-group__second,
@@ -1244,6 +1282,24 @@ p {
 
 /* css menu */
 
+/* css trang đăng ký */
+.btn-continues {
+    width: 100%;
+    min-height: 44px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.signin-with-other {
+    font-size: calc(var(--font-size-base) - 4px);
+    text-align: left;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.login-line__word {
+    font-size: calc(var(--font-size-base) - 4px);
+}
 
 /* css trang chu */
 
@@ -1317,9 +1373,18 @@ p {
     right: -20px;
 }
 
+.view-all__custom,
 .view-all,
 .product-viewall {
     padding-bottom: 10px;
+}
+
+.view-all__custom {
+    border-bottom: 1px solid var(--red-color);
+}
+
+.view-all,
+.product-viewall {
     border-bottom: 1px solid var(--primary-color);
     color: var(--primary-color);
 }

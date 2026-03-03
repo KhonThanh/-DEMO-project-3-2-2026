@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3-2-2026</title>
+    <link rel="icon" type="image/png" href="./img/logo/CH_XUYEN_BANG-09_32x32.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class=" ">
+        <div class="topbar container-f bg-black" data-include="../component/marquee.html"></div>
+        <div class="header-desktop" data-include="../component/header.html"></div>
+        <div class="header-mobile container-f" data-include="../component/menu-mobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor pos-rel">
+        <section class="flex bg-white container-f">
+            <div class=" container-l nav-bar__container">
+                <a href="#" class="nav-bar__item">Trang chủ</a>
+                <a href="#" class="nav-bar__item">Liên hệ</a>
+            </div>
+        </section>
+        <section class="container-f container-padding">
+            <div class="container-l flex flex-col gap-20">
+                <div class="contact-header flex flex-col gap-20">
+                    <h2 class="contact-title">Contact Us</h2>
+                    <p class="contact-desc">
+                        Have a question or comment?<br>
+                        Use the form below to send us a message or contact us by mail at:
+                    </p>
+                </div>
+
+                <form class="contact-form flex flex-col gap-20" action="#" method="post">
+                    <div class="form-group flex flex-col gap-20">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group flex flex-col gap-20">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone" inputmode="numeric" autocomplete="tel">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group flex flex-col gap-20">
+                        <label for="contact-email">
+                            Email <span class="required">*</span>
+                        </label>
+                        <input type="email" id="contact-email" name="email" required autocomplete="email"
+                            placeholder="example@email.com">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group flex flex-col gap-20">
+                        <label for="contact-comment">
+                            Comment <span class="required">*</span>
+                        </label>
+                        <textarea id="contact-comment" name="comment" rows="6" required></textarea>
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit bg-primary text-color-white">
+                            Submit Contact
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="subscribe-section container-f bg-gray container-padding" data-include="./component/subscribe.html">
+        </section>
+    </main>
+    <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

@@ -21,21 +21,18 @@
                     <img src="./img/logo/CH_XUYEN_BANG-09_32x32.webp" alt="Logo">
                 </div>
 
-                <h3 class="auth-title">Đăng ký</h3>
-                <p class="auth-desc">Vui lòng nhập thông tin đăng nhập</p>
-                <a href="#" class="bg-primary text-color-white btn-continues flex center-ver center-hor"  type="submit">Tiếp tục mua sắm</a>
-                <p class="text-center login-line__word">-------------------------- Hoặc --------------------------</p>
+                <h3 class="auth-title">Nhập mã</h3>
+                <p class="auth-desc">Đã gửi đến ABC@gmail.com</p>
                 <form class="js-validate-form flex flex-col gap-10" data-form="login">
-
-                    <p>Email</p>
                     <div class="form-group flex">
-                        <input type="email" name="email" data-msg="Email không hợp lệ" autocomplete="email"
-                            placeholder="VD: 2v9tA@example.com">
+                        <input type="text" name="register_code" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+                            autocomplete="one-time-code" placeholder="Nhập mã 6 số">
                         <small class="error-msg"></small>
                     </div>
 
-                    <button type="submit">Đăng ký</button>
+                    <button type="submit">Gửi</button>
                 </form>
+                <a href="#" class="signin-with-other">Đăng ký với email khác</a>
             </div>
         </section>
     </main>
