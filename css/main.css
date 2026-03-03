@@ -1636,7 +1636,33 @@ p {
     transform: scale(1.08);
 }
 
-.product-name {}
+.product-name {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.product-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 80%;
+    height: 1px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease;
+}
+
+.product-name:hover {
+    color: var(--primary-color);
+}
+
+.product-name:hover::after {
+    transform: scaleX(1);
+}
 
 .product-price {}
 
@@ -1668,6 +1694,13 @@ p {
 .btn-product {
     max-width: 220px;
     min-width: 150px;
+    transition: background-color 0.6s ease ;
+    transition: color 0.6s ease ;
+}
+
+.btn-product:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .seemore-btn {
@@ -1706,8 +1739,8 @@ p {
 .best-seller-slider .slick-dots li button {
     border-radius: 50px;
     aspect-ratio: 1 / 1;
-    width: 20px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
     background-color: var(--white-color);
     border: 1px solid var(--primary-color);
     font-size: 0px;
