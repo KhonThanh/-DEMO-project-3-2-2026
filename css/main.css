@@ -1828,6 +1828,16 @@ p {
 
 .hero-bottom-banner {}
 
+/* css trang sản phẩm */
+.collection-sidebar{
+    width: 20%;
+}
+
+.collection-content{
+    width: calc(100% - 20% - 10px);
+}
+
+
 /* css 404 page */
 .pagenotfound-container a {
     padding: 15px 30px;
