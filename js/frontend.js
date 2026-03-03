@@ -984,6 +984,12 @@ document.addEventListener("DOMContentLoaded", () => {
         overlayCloses: true
       },
       {
+        trigger: ".product-tab",
+        target: ".product-tab__pane",
+        behavior: "activate",
+        activeClass: "active"
+      },
+      {
         trigger: ".mobile-overlay",
         activeClass: "active",
 
@@ -1012,7 +1018,7 @@ document.addEventListener("DOMContentLoaded", () => {
         closeOnEsc: true,
         innerSelector: ".quickview-inner",
         closeBtn: ".btn-close",
-      }
+      },
     ]);
 
     initCardLink({
@@ -1029,11 +1035,12 @@ document.addEventListener("DOMContentLoaded", () => {
       mainSelector: ".quickview-main",
       navSelector: ".quickview-thumbs",
 
-      minSlides: 6,
+      minSlides: 5,
 
       mainOptions: {
         arrows: false,
         fade: true,
+        infinite: true,
       },
 
       navOptions: {
@@ -1043,6 +1050,27 @@ document.addEventListener("DOMContentLoaded", () => {
         centerMode: true,
         arrows: true,
 
+      }
+    });
+
+    initSlickSlider({
+      mainSelector: ".detailproduct-main",
+      navSelector: ".detailproduct-thumbs",
+
+      minSlides: 5,
+
+      mainOptions: {
+        arrows: false,
+        fade: true,
+        infinite: true,
+      },
+
+      navOptions: {
+        infinite: true,
+        slidesToShow: 3,
+        focusOnSelect: true,
+        centerMode: true,
+        arrows: true,
       }
     });
     initViewModeSwitcher();

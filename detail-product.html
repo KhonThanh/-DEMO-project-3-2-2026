@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3-2-2026</title>
+    <link rel="icon" type="image/png" href="./img/logo/CH_XUYEN_BANG-09_32x32.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class=" ">
+        <div class="topbar container-f bg-black" data-include="../component/marquee.html"></div>
+        <div class="header-desktop" data-include="../component/header.html"></div>
+        <div class="header-mobile container-f" data-include="../component/menu-mobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor pos-rel">
+        <section class="flex bg-white container-f">
+            <div class=" container-l nav-bar__container">
+                <a href="#" class="nav-bar__item">Trang chủ</a>
+                <a href="#" class="nav-bar__item">Sản phẩm</a>
+                <a href="#" class="nav-bar__item">"Tên sản phẩm</a>
+            </div>
+        </section>
+        <section class="container-f container-padding bg-white">
+            <div class="detailproduct-container container-m">
+                <div class="detailproduct-inner flex gap-20 flex-wrap">
+                    <div class="detailproduct-gallery flex flex-col gap-20">
+                        <div class="detailproduct-main">
+                            <div><img src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                            <div><img src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                            <div><img src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                        </div>
+                        <div class="detailproduct-thumbs cursor-pointer">
+                            <div class="detailproduct-thumbs__item"><img
+                                    src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                            <div class="detailproduct-thumbs__item"><img
+                                    src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                            <div class="detailproduct-thumbs__item"><img
+                                    src="./img/product/pack_banh_trang_abi_185x.webp" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="detailproduct-content flex flex-col gap-20">
+
+                        <h2 class="detailproduct-title">Mut Dua Hop 400g</h2>
+
+                        <span class="text-color-red flex center-ver gap-10">
+                            <img class="hotdeal-icon" src="./img/icon/fire.svg" alt="">
+                            15 sold in last 17 hours
+                        </span>
+
+                        <p class="detailproduct-desc">
+                            Vendor: CT Choice
+                            <br>
+                            Availability: In stock
+                            <br>
+                            Product type: sauces
+                        </p>
+
+                        <p class="detailproduct-price"><strong>$15.99</strong></p>
+                        <p>Quantity: 1 hu</p>
+
+                        <div class="Quantity-check__container flex flex-wrap gap-20">
+                            <div class="Quantity-check__item active">1 Hu</div>
+                            <div class="Quantity-check__item">Pack of 5</div>
+                        </div>
+
+                        <div class="detailproduct-qty flex center-ver gap-10">
+                            <button class="qty-minus">-</button>
+                            <span class="qty-number text-center">1</span>
+                            <button class="qty-plus">+</button>
+                        </div>
+
+                        <div class="detailproduct-actions flex gap-20">
+                            <button class="detailproduct-btn__add flex-1 cursor-pointer bg-black text-color-white">
+                                Add To Cart
+                            </button>
+                            <button class="detailproduct-btn__like bg-white cursor-pointer">
+                                <img src="./img/icon/heart-gray.svg" alt="">
+                            </button>
+                        </div>
+
+                        <button class="detailproduct-btn__buy cursor-pointer bg-white">
+                            BUY IT NOW
+                        </button>
+
+                        <span class="flex gap-10 detailproduct-btn__seecount">
+                            <img src="./img/icon/eye.svg" alt="">
+                            46 customers are viewing this product
+                        </span>
+
+                        <div class="detailproduct-extra-info flex flex-col gap-20">
+
+                            <div class="detailproduct-info-item flex gap-10">
+                                <div class="info-icon">🚚</div>
+                                <div class="info-content">
+                                    <strong>Shipping & Delivery</strong>
+                                    <p>Free standard shipping on orders over $49</p>
+                                    <p>Overnight shipping is not included</p>
+                                </div>
+                            </div>
+
+                            <div class="detailproduct-info-item flex gap-10">
+                                <div class="info-icon">🛡️</div>
+                                <div class="info-content">
+                                    <strong>Return Policy</strong>
+                                    <p>Learn More.</p>
+                                </div>
+                            </div>
+
+                            <div class="detailproduct-info-item flex gap-10">
+                                <div class="info-icon">⚠️</div>
+                                <div class="info-content">
+                                    <strong>Important Information</strong>
+                                    <p class="text-color-red cursor-pointer">View More.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="container-f container-padding bg-white">
+            <div class=" container-m product-tabs flex flex-col gap-20 center-ver">
+
+                <!-- Tab Header -->
+                <div class="product-tabs__nav flex gap-20">
+                    <div class="product-tab col-3 text-center active" data-target="#tab-desc">Description</div>
+                    <div class="product-tab col-3 text-center" data-target="#tab-info">Additional Information</div>
+                    <div class="product-tab col-3 text-center" data-target="#tab-ship">Shipping & Return</div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="product-tabs__content">
+
+                    <div id="tab-desc" class="product-tab__pane product-tab__content active  flex-col gap-20">
+
+                        <h3>Bánh Tráng Truyền Thống Cao Cấp</h3>
+
+                        <p>
+                            <strong>Bánh tráng truyền thống</strong> là một trong những nguyên liệu quen thuộc trong ẩm
+                            thực Việt Nam,
+                            được làm từ gạo chọn lọc kỹ lưỡng và sản xuất theo quy trình hiện đại nhưng vẫn giữ được
+                            hương vị nguyên bản.
+                            Sản phẩm có độ dẻo vừa phải, không quá mỏng cũng không quá dày, phù hợp cho nhiều món ăn
+                            khác nhau.
+                        </p>
+
+                        <p>
+                            Với kết cấu mềm khi thấm nước và độ dai nhẹ sau khi cuốn, bánh tráng giúp món ăn giữ được
+                            hình dáng đẹp mắt
+                            và không bị rách. Đây là lựa chọn lý tưởng cho cả gia đình và nhà hàng.
+                        </p>
+
+                        <h3>Phù hợp cho nhiều món ăn</h3>
+
+                        <ul>
+                            <li>Cuốn gỏi cuốn tôm thịt</li>
+                            <li>Cuốn rau sống chấm mắm nêm</li>
+                            <li>Làm bánh tráng nướng</li>
+                            <li>Chế biến món ăn vặt sáng tạo</li>
+                        </ul>
+
+                        <p>
+                            Sản phẩm được đóng gói kỹ càng, đảm bảo vệ sinh an toàn thực phẩm và giữ được độ tươi ngon
+                            lâu dài.
+                        </p>
+
+                    </div>
+
+                    <div id="tab-info" class="product-tab__pane product-tab__content flex-col gap-20">
+
+                        <h3 class="text-center">Thành Phần & Thông Tin Sản Phẩm</h3>
+
+                        <table>
+                            <tr>
+                                <th>Thành phần chính</th>
+                                <td>Bột gạo, nước tinh khiết, muối</td>
+                            </tr>
+                            <tr>
+                                <th>Khối lượng</th>
+                                <td>400g</td>
+                            </tr>
+                            <tr>
+                                <th>Xuất xứ</th>
+                                <td>Việt Nam</td>
+                            </tr>
+                            <tr>
+                                <th>Hạn sử dụng</th>
+                                <td>12 tháng kể từ ngày sản xuất</td>
+                            </tr>
+                            <tr>
+                                <th>Bảo quản</th>
+                                <td>Nơi khô ráo, tránh ánh nắng trực tiếp</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div id="tab-ship" class="product-tab__pane product-tab__content  flex-col gap-20">
+
+                        <h3>Returns Policy</h3>
+
+                        <p>
+                            You may return most new, unopened items within 14 days of delivery for a full refund.
+                            We'll also pay the return shipping costs if the return is a result of our error
+                            (you received an incorrect or defective item, etc.).
+                        </p>
+
+                        <p>
+                            You should expect to receive your refund within four weeks of giving your package to the
+                            return shipper,
+                            however, in many cases you will receive a refund more quickly.
+                            This time period includes the transit time for us to receive your return from the shipper
+                            (5 to 10 business days), the time it takes us to process your return once we receive it
+                            (3 to 5 business days), and the time it takes your bank to process our refund request
+                            (5 to 10 business days).
+                        </p>
+
+                        <p>
+                            If you need to return an item, simply login to your account,
+                            view the order using the "Complete Orders" link under the My Account menu
+                            and click the Return Item(s) button.
+                            We'll notify you via e-mail of your refund once we've received and processed the returned
+                            item.
+                        </p>
+
+                        <h3>Shipping</h3>
+
+                        <p>
+                            We can ship to physical addresses in USA.
+                            Note that there are restrictions on some products,
+                            and some products cannot be shipped to international destinations.
+                        </p>
+
+                        <p>
+                            When you place an order, we will estimate shipping and delivery dates for you
+                            based on the availability of your items and the shipping options you choose.
+                            Depending on the shipping provider you choose,
+                            shipping date estimates may appear on the shipping quotes page.
+                        </p>
+
+                        <p>
+                            Please also note that the shipping rates for many items we sell are weight-based.
+                            The weight of any such item can be found on its detail page.
+                            To reflect the policies of the shipping companies we use,
+                            all weights will be rounded up to the next full pound.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="container-f container-padding">
+            <div class="container-l recently-viewed flex flex-col gap-20">
+                <h3 class="text-center">Related Products</h3>
+                <div class="flex flex-wrap gap-20 center-hor">
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-f container-padding">
+            <div class="container-l recently-viewed flex flex-col gap-20">
+                <h3 class="text-center">Recently Viewed Products</h3>
+                <div class="flex flex-wrap gap-20 center-hor">
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
+                        <div class="product-img pos-rel">
+                            <img class="product-img__primary pos-abs" src="./img/product/pack_banh_trang_abi_185x.webp"
+                                alt="">
+                            <img class="product-img__hover" src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <button class="btn-quick-view pos-abs">Quick View</button>
+                        </div>
+
+                        <h3 class="product-name">
+                            Mut Dua Hop 400g
+                        </h3>
+                        <div class="product-price flex gap-10">
+                            <span class="price-old"><strong>$159.99</strong></span>
+                            <p>From</p>
+                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                        </div>
+
+                        <div class="buy-container flex center-hor gap-20">
+                            <button class="btn-product  bg-white">
+                                Add to Cart
+                            </button>
+                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
+                                    src="./img/icon/heart-gray.svg" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe-section container-f bg-gray container-padding"
+            data-include="./component/subscribe.html"></section>
+    </main>
+    <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>
