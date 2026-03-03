@@ -512,7 +512,7 @@ p {
 
 .help-header img,
 .catagories-header svg {
-    min-width: 17px;
+    width: 17px;
     aspect-ratio: 1 / 1;
 }
 
@@ -1985,15 +1985,15 @@ p {
         width: 100%;
     }
 
-    .quickview-container{
+    .quickview-container {
         height: 70vh;
         overflow: hidden;
     }
 
-    .quickview-inner{
+    .quickview-inner {
         height: 100%;
         overflow-y: scroll;
-         min-height: 0;
+        min-height: 0;
     }
 }
 
