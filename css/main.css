@@ -662,6 +662,7 @@ p {
     font-weight: 500;
     font-size: calc(var(--font-size-base) - 2px);
     border-bottom: 1px solid transparent;
+    transition: border-bottom 0.6s ease;
 }
 
 .menu-container__bar {
@@ -947,7 +948,7 @@ p {
 }
 
 .menu-container__item:hover {
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .menu-leveltwo__container {
@@ -1797,6 +1798,11 @@ p {
     z-index: 2;
     top: 10px;
     left: 10px;
+    opacity: 0;
+}
+
+.sale-badge.active{
+    opacity: 1;
 }
 
 .price {}
