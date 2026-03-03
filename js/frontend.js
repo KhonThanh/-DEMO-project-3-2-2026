@@ -100,8 +100,11 @@ function initToggleSystem(configs = []) {
 
         // ---- toggle mode ----
         else {
-          if (targetEl) targetEl.classList.toggle(activeClass);
-          else trigger.classList.toggle(activeClass);
+          if (targets.length > 0) {
+            targets.forEach(t => t.classList.toggle(activeClass));
+          } else {
+            trigger.classList.toggle(activeClass);
+          }
         }
 
         // callback onToggle (nếu có)
@@ -756,6 +759,35 @@ function initCardLink({
   });
 }
 
+// js đổi class col cho trang sản phẩm
+function initViewModeSwitcher() {
+
+  const layoutClasses = ["col-1", "col-2", "col-3", "col-4", "row"];
+
+  document.addEventListener("click", function (e) {
+
+    const btn = e.target.closest(".btnchange-type");
+    if (!btn) return;
+
+    const layout = btn.dataset.layout;
+    if (!layout) return;
+
+    // active button
+    document.querySelectorAll(".btnchange-type")
+      .forEach(b => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    // update card
+    document.querySelectorAll(".product-card").forEach(card => {
+      card.classList.remove(...layoutClasses);
+      card.classList.add(layout);
+    });
+
+  });
+
+}
+
 // js tăng số luọng
 function initQuantityControl(selector = ".quickview-qty") {
 
@@ -939,6 +971,19 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       {
+        trigger: ".filter-group ",
+        activeClass: "active",
+        behavior: "activate",
+      },
+      {
+        trigger: ".filter-btn",
+        target: ".collection-sidebar, .sidebar-overlay",
+        closeBtn: ".collection-sidebar .close__sidebar",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        overlayCloses: true
+      },
+      {
         trigger: ".mobile-overlay",
         activeClass: "active",
 
@@ -1000,6 +1045,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       }
     });
+    initViewModeSwitcher();
 
   });
 });
