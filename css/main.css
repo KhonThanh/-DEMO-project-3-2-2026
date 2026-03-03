@@ -1653,7 +1653,7 @@ p {
     background-color: var(--primary-color);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.7s ease;
+    transition: transform 0.8s ease;
 }
 
 .product-name:hover {
@@ -1855,11 +1855,20 @@ p {
 .hero-banner img {
     border-radius: 10px;
     aspect-ratio: 25 / 11;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
-.hero-bottom-banner {}
+.hero-bottom-banner img,
+.hero-bottom-banner {
+    aspect-ratio: 25 / 3;
+}
+
+.hero-bottom-banner img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
 
 /* css trang sản phẩm */
 .collection-sidebar{
