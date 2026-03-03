@@ -733,7 +733,60 @@ function initFormValidation(root = document) {
   });
 }
 
+// js để tạo hieuj ứng như thẻ A
+function initCardLink({
+  cardSelector,
+  ignoreSelectors = [],
+}) {
+  document.querySelectorAll(cardSelector).forEach(card => {
+    card.addEventListener("click", function (e) {
 
+      // nếu click vào element nằm trong danh sách ignore thì bỏ qua
+      for (let selector of ignoreSelectors) {
+        if (e.target.closest(selector)) {
+          return;
+        }
+      }
+
+      const link = this.dataset.link;
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });
+}
+
+// js tăng số luọng
+function initQuantityControl(selector = ".quickview-qty") {
+
+  document.querySelectorAll(selector).forEach(wrapper => {
+
+    const minusBtn = wrapper.querySelector(".qty-minus");
+    const plusBtn = wrapper.querySelector(".qty-plus");
+    const numberEl = wrapper.querySelector(".qty-number");
+
+    if (!minusBtn || !plusBtn || !numberEl) return;
+
+    // tránh bind trùng
+    if (wrapper.dataset.qtyBound === "true") return;
+    wrapper.dataset.qtyBound = "true";
+
+    plusBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      let current = parseInt(numberEl.textContent) || 0;
+      numberEl.textContent = current + 1;
+    });
+
+    minusBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      let current = parseInt(numberEl.textContent) || 0;
+      if (current > 1) {
+        numberEl.textContent = current - 1;
+      }
+    });
+
+  });
+}
 
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -829,7 +882,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     initToggleSystem([
-      // ===== MOBILE MENU =====
       {
         trigger: ".mobile-menu-btn",
         target: ".mobile-menu",
@@ -858,7 +910,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
 
-      // ===== MOBILE SEARCH =====
       {
         trigger: ".mobile-search-btn",
         target: ".mobile-search",
@@ -887,7 +938,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       },
 
-      // ===== OVERLAY CLICK =====
       {
         trigger: ".mobile-overlay",
         activeClass: "active",
@@ -897,8 +947,48 @@ document.addEventListener("DOMContentLoaded", () => {
           document.querySelector(".mobile-search").classList.remove("active");
           document.querySelector(".mobile-overlay").classList.remove("active");
         }
+      },
+      {
+        trigger: ".btn-like",
+        activeClass: "active",
+      },
+      {
+        trigger: ".Quantity-check__item",
+        activeClass: "active",
+        behavior: "activate"
       }
     ]);
+
+    initCardLink({
+      cardSelector: ".product-card[data-link]",
+      ignoreSelectors: [
+        ".btn-quick-view",
+        ".btn-like",
+        ".btn-product"
+      ]
+    });
+
+    initQuantityControl();
+    initSlickSlider({
+      mainSelector: ".quickview-main",
+      navSelector: ".quickview-thumbs",
+
+      minSlides: 6, 
+
+      mainOptions: {
+        arrows: false,
+        fade: true,
+      },
+
+      navOptions: {
+        infinite: true,
+        slidesToShow: 3,
+        focusOnSelect: true,
+        centerMode: true,
+        arrows:true,
+
+      }
+    });
 
   });
 });
