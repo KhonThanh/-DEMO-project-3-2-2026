@@ -889,6 +889,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     initSlickSlider({
+      mainSelector: ".product-sub__container",
+      minSlides: 6,
+      mainOptions: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: true,
+      }
+    });
+
+    initSlickSlider({
       mainSelector: ".best-seller-slider",
       minSlides: 10,
       mainOptions: {
@@ -988,6 +1000,28 @@ document.addEventListener("DOMContentLoaded", () => {
         target: ".product-tab__pane",
         behavior: "activate",
         activeClass: "active"
+      },
+      {
+        trigger: ".open-cart",
+        target: ".cart-section",
+        activeClass: "active",
+        behavior: "toggle",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        overlayCloses: true,
+        innerSelector: ".cart-drawer",
+        closeBtn: ".cart-close"
+      },
+      {
+        trigger: ".open-cart__mb",
+        target: ".cart-section",
+        activeClass: "active",
+        behavior: "toggle",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        overlayCloses: true,
+        innerSelector: ".cart-drawer",
+        closeBtn: ".cart-close"
       },
       {
         trigger: ".mobile-overlay",
