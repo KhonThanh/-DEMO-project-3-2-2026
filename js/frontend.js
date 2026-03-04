@@ -779,7 +779,7 @@ function initViewModeSwitcher() {
     btn.classList.add("active");
 
     // update card
-    document.querySelectorAll(".product-card").forEach(card => {
+    document.querySelectorAll(".collection-container .product-card").forEach(card => {
       card.classList.remove(...layoutClasses);
       card.classList.add(layout);
     });
@@ -885,6 +885,45 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoint: 992,
             settings: { slidesToShow: 2 }
           },
+        ]
+      }
+    });
+    initSlickSlider({
+      mainSelector: ".category-slider",
+      minSlides: 10,
+      mainOptions: {
+        slidesToShow: 10,
+        slidesToScroll: 1,
+        rows: 2,
+        infinite: false,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 6
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 4
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 2,
+              arrows: false,
+              dots: false
+            }
+          }
         ]
       }
     });

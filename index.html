@@ -20,70 +20,24 @@
         <div class="header-mobile container-f" data-include="../component/menu-mobile.html"></div>
     </header>
     <main class="container-f flex flex-col center-hor pos-rel">
-        <section class="home-hero container-f bg-white-gray hero-padding">
-            <div class="container-m flex flex-col gap-20">
-                <div class="hero-top flex gap-20">
-                    <div class="hero-categories btn-custom-fit flex flex-col gap-20">
-                        <h3 class="cat-titlecat-title bg-primary text-color-white">PRODUCT CATEGORY</h3>
-                        <div class="cat-grid flex flex-wrap gap-10">
-                            <!-- <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/snacks.webp" alt="">
-                                <span class="text-center">Snacks</span>
-                            </a> -->
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/frozen.webp" alt="">
-                                <span class="text-center">Frozen</span>
-                            </a>
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/dry-goods.webp" alt="">
-                                <span class="text-center">Dry goods</span>
-                            </a>
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/fresh-fruits.webp" alt="">
-                                <span class="text-center">Fruits</span>
-                            </a>
-
-                            <!-- <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/instant-foods.webp" alt="">
-                                <span class="text-center">Instant Foods</span>
-                            </a> -->
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/sauces-dips.webp" alt="">
-                                <span class="text-center">Ready-to-Eat Meals</span>
-                            </a>
-
-                            <!-- <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/coffee-drinks.webp" alt="">
-                                <span class="text-center">Coffee & Drinks</span>
-                            </a>
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/frozen-seafood.webp" alt="">
-                                <span class="text-center">Frozen Seafood</span>
-                            </a>
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/specialty-foods.webp" alt="">
-                                <span class="text-center">Specialty Foods</span>
-                            </a>
-
-                            <a href="#" class="cat-item flex flex-col gap-10 center-hor">
-                                <img src="./img/icon/nail-supplies.webp" alt="">
-                                <span class="text-center">Nail Supplies</span>
-                            </a> -->
-                        </div>
-                    </div>
-                    <div class="hero-banner">
-                        <img src="./img/banner/banner-nga-kim-le-demo.png" alt="Package Deal">
-                    </div>
+        <section class="home-hero container-f bg-white hero-padding">
+            <div class="container-l flex flex-col gap-20">
+                <div class="hero-banner">
+                    <img src="./img/banner/banner-nga-kim-le-demo.png" alt="Package Deal">
                 </div>
-                <!-- <div class="hero-bottom-banner">
-                    <img src="./img/banner/home-banner-large-2.avif" alt="Free Shipping">
-                </div> -->
+            </div>
+        </section>
+        <section class="container-f product-category__container bg-white-gray container-padding">
+            <div class="container-f flex-col flex gap-20 ">
+                <h2 class="text-center">PRODUCT CATEGORY</h2>
+                <div class="category-slider">
+                    <a href="#" class="cate-item ">
+                        <div class="cate-item__content bg-white flex flex-col gap-10 center-ver">
+                            <img src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
+                            <p>Frozen</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
         <section class="hotdeal-section container-f  center-hor bg-white container-padding">
@@ -114,10 +68,10 @@
                                 </div>
                             </div>
 
-                            <h3 class="product-name">
+                            <h3 class="product-name text-center">
                                 Mut Dua Hop 400g
                             </h3>
-                            <div class="product-price flex gap-10">
+                            <div class="product-price flex gap-10 center-hor">
                                 <span class="price-old"><strong>$159.99</strong></span>
                                 <p>From</p>
                                 <span class="price-new text-color-red"><strong>$15.99</strong></span>
@@ -127,8 +81,6 @@
                                 <button class="btn-product  bg-white">
                                     Add to Cart
                                 </button>
-                                <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                        src="./img/icon/heart-gray.svg" alt=""></p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +94,7 @@
         </section>
         <section class="best-seller-section container-f  center-hor bg-white-gray container-padding">
             <div class="container-m flex flex-col gap-30">
-                <div class="flex center-ver gap-20">
+                <div class="flex center-ver gap-20 jus-content">
                     <h2 class="product-title">Best Sellers</h2>
                     <a href="#" class="product-viewall">Shop All</a>
                 </div>
@@ -160,10 +112,10 @@
                                 </div>
                             </div>
 
-                            <h3 class="product-name">
+                            <h3 class="product-name text-center">
                                 Mut Dua Hop 400g
                             </h3>
-                            <div class="product-price flex gap-10">
+                            <div class="product-price flex gap-10 center-hor">
                                 <span class="price-old"><strong>$159.99</strong></span>
                                 <p>From</p>
                                 <span class="price-new text-color-red"><strong>$15.99</strong></span>
@@ -173,85 +125,15 @@
                                 <button class="btn-product  bg-white">
                                     Add to Cart
                                 </button>
-                                <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                        src="./img/icon/heart-gray.svg" alt=""></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="nail-section container-f bg-white-gray container-padding">
-            <div class="container-m nail-layout flex gap-20">
-                <div class="nail-banner bg-white">
-                    <img src="./img/banner/super-deal.webp" alt="Pedicure Banner">
-                </div>
-                <div class="nail-center bg-white pos-rel">
-                    <div class="nail-header flex center-ver gap-20">
-                        <h2>Nail Supplies | More Coming...</h2>
-                        <a href="#" class="view-all">View all</a>
-                    </div>
-                    <button class="nail-prev slider-btn pos-abs">‹</button>
-                    <div class="nail-slider-wrapper">
-                        <div data-link="#" class="nail-slider">
-                            <div class="product-card cursor-pointer flex flex-col gap-10 pos-rel">
-                                <div class="product-img pos-rel">
-                                    <img class="nail-silder__primary" src="./img/product/pack_banh_trang_abi_185x.webp"
-                                        alt="">
-                                    <img class="nail-silder__hover pos-abs"
-                                        src="./img/product/pack_banh_trang_abi_185x.webp" alt="">
-                                    <span class="sale-badge pos-abs text-color-white">Sale</span>
-                                    <button class="btn-quick-view pos-abs">Quick View</button>
-                                </div>
-                                <h3>TABLE LAMP 2025 NEW MODEL</h3>
-                                <div class="price">
-                                    <span>$110.00</span>
-                                </div>
-                                <div class="buy-container flex center-hor">
-                                    <button class="btn-product bg-white" tabindex="0">
-                                        Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="nail-next slider-btn pos-abs">›</button>
-                </div>
-                <div class="nail-sidebar flex flex-col flex-wrap gap-20">
-                    <div class="side-item bg-white flex gap-20 center-ver jus-content">
-                        <div class="flex flex-col gap-10">
-                            <h4>Snacks</h4>
-                            <a href="#">Shop now</a>
-                        </div>
-                        <img src="./img/icon/snacks-cat_200x.avif" alt="">
-                    </div>
-
-                    <div class="side-item bg-white flex gap-20 center-ver jus-content">
-                        <div class="flex flex-col gap-10">
-                            <h4>Fresh Fruits</h4>
-                            <a href="#">Shop now</a>
-                        </div>
-                        <img src="./img/icon/fresh-fruits-cho-xuyen-bang_200x.avif" alt="">
-                    </div>
-
-                    <div class="side-item bg-white flex  gap-20 center-ver jus-content">
-                        <div class="flex flex-col gap-10">
-                            <h4>Coffee Drinks</h4>
-                            <a href="#">Shop now</a>
-                        </div>
-                        <img src="./img/icon/coffee-drinks-cat_200x.avif" alt="">
-                    </div>
-
-                    <div class="side-all bg-white flex flex-col gap-20 center-ver">
-                        <a href="#">View all categories</a>
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
-        <section class="product-section container-f bg-white-gray container-padding">
+        <section class="product-section container-f bg-white container-padding">
             <div class="container-m product-container flex flex-col gap-20">
-                <div class="product-header flex gap-20 center-ver">
+                <div class="product-header flex gap-20 center-ver jus-content">
                     <h2 class="product-title">Sản Phẩm Mới Mỗi Ngày!</h2>
                     <a href="#" class="product-viewall">Shop All</a>
                 </div>
@@ -265,21 +147,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -291,21 +171,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -317,21 +195,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -343,21 +219,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -369,21 +243,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -395,21 +267,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -421,21 +291,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -447,21 +315,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -473,21 +339,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -499,21 +363,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -525,21 +387,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -551,21 +411,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -577,21 +435,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -603,21 +459,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -629,21 +483,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -655,21 +507,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -681,21 +531,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -707,21 +555,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -733,21 +579,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                     <div data-link="#" href="#" class="col-4 cursor-pointer product-card bg-white flex flex-col gap-20">
@@ -759,21 +603,19 @@
                             <span class="sale-badge pos-abs text-color-white">Sale</span>
                         </div>
 
-                        <h3 class="product-name">
+                        <h3 class="product-name text-center">
                             Mut Dua Hop 400g
                         </h3>
-                        <div class="product-price flex gap-10">
-                            <span class="price-old"><strong>$159.99</strong></span>
+                        <div class="product-price flex gap-10 center-hor">
+                            <span class="price-old text-center"><strong>$159.99</strong></span>
                             <p>From</p>
-                            <span class="price-new text-color-red"><strong>$15.99</strong></span>
+                            <span class="price-new text-color-red "><strong>$15.99</strong></span>
                         </div>
 
                         <div class="buy-container flex center-hor gap-20">
                             <button class="btn-product  bg-white">
                                 Add to Cart
                             </button>
-                            <p class="bg-gray flex center-ver center-hor btn-like cursor-pointer"><img
-                                    src="./img/icon/heart-gray.svg" alt=""></p>
                         </div>
                     </div>
                 </div>
