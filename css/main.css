@@ -605,10 +605,11 @@ p {
     display: block;
 }
 
-.header-top,
+/* .header-top,
 .header-bottom {
     justify-content: space-between;
-}
+} */
+
 
 .header-function {
     gap: 10px;
