@@ -1,6 +1,6 @@
 /* css base */
 :root {
-    --primary-color: #006f46;
+    --primary-color: #F41A22;
     --cart-color-item: #fd6506;
     --white-color: #FEFEFE;
     --light-dark: #999999;
@@ -510,6 +510,10 @@ p {
     border: transparent;
 }
 
+.catagories-header{
+    display: none;
+}
+
 .help-header img,
 .catagories-header svg {
     width: 17px;
@@ -549,10 +553,11 @@ p {
 }
 
 .logo img {
-    aspect-ratio: 150 / 54;
+    aspect-ratio: 150 / 30;
     max-width: 260px;
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .header__search {
