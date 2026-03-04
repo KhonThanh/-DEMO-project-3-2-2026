@@ -501,7 +501,7 @@ p {
 }
 
 .mobile-logo img {
-    height: 45px;
+    height: 25px;
 }
 
 .mobile-menu-btn,
@@ -1086,7 +1086,7 @@ p {
 
 /* css form đăng nhập và đang ký */
 .auth-section__logo {
-    min-width: 320px;
+    max-width: 240px;
 }
 
 .otp-group input {
