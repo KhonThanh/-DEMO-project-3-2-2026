@@ -1874,8 +1874,9 @@ p {
 .hero-categories {}
 
 .cat-title {
-    padding: 6px 20px;
+    padding: 6px 10px;
     border-radius: 5px;
+    font-size: calc(var(--font-size-base) - 2px);
 }
 
 .hero-padding {
@@ -1884,7 +1885,7 @@ p {
 
 .hero-categories {
     width: 20%;
-    padding: 20px;
+    padding: 15px;
     overflow: hidden;
     font-size: calc(var(--font-size-base) - 2px);
 }
