@@ -2331,6 +2331,10 @@ p {
         visibility: visible;
     }
 
+    .mobile-logo img{
+        max-height: 12px;
+    }
+
 }
 
 @media screen and (max-width : 700px) {
