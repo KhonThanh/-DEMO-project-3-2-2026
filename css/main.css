@@ -1792,6 +1792,7 @@ p {
     padding: 5px;
 }
 
+.category-slider .slick-dots,
 .best-seller-slider .slick-dots {
     display: flex !important;
     justify-content: center;
@@ -1800,15 +1801,18 @@ p {
     margin: 20px;
 }
 
+.category-slider .slick-dots,
 .best-seller-slider .slick-dots {
     padding: 0px;
 }
 
+.category-slider .slick-dots li,
 .best-seller-slider .slick-dots li {
     display: flex;
     align-items: center;
 }
 
+.category-slider .slick-dots li button,
 .best-seller-slider .slick-dots li button {
     border-radius: 50px;
     aspect-ratio: 1 / 1;
@@ -1819,6 +1823,7 @@ p {
     font-size: 0px;
 }
 
+.category-slider .slick-dots .slick-active button,
 .best-seller-slider .slick-dots .slick-active button {
     background-color: var(--primary-color);
 }

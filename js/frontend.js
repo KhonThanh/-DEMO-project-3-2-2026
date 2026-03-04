@@ -901,27 +901,29 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             breakpoint: 1200,
             settings: {
-              slidesToShow: 6
+              slidesToShow: 6,
             }
           },
           {
             breakpoint: 992,
             settings: {
-              slidesToShow: 4
+              slidesToShow: 4,
+              dots: true,
             }
           },
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: 3
+              slidesToShow: 4,
+               dots: true,
             }
           },
           {
             breakpoint: 576,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 4,
               arrows: false,
-              dots: false
+              dots: true
             }
           }
         ]
