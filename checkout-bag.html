@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3-2-2026</title>
+    <link rel="icon" type="image/png" href="./img/logo/CH_XUYEN_BANG-09_32x32.webp">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class=" ">
+        <!-- <div class="topbar container-f bg-black" data-include="../component/marquee.html"></div> -->
+        <div class="header-desktop" data-include="../component/header.html"></div>
+        <div class="header-mobile container-f" data-include="../component/menu-mobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor pos-rel">
+        <section class="flex bg-white container-f">
+            <div class=" container-l nav-bar__container">
+                <a href="#" class="nav-bar__item">Trang chủ</a>
+                <a href="#" class="nav-bar__item">Thanh toán</a>
+            </div>
+        </section>
+        <section class="container-f checkout-section container-padding">
+            <div class="container-l checkout-container flex gap-30 flex-wrap">
+                <div class="checkout-form ">
+                    <form class="js-validate-form flex flex-col gap-20" data-form="checkout">
+                        <p>Email</p>
+                        <div class="form-group flex flex-col">
+                            <input type="email" name="email" placeholder="Email" required
+                                data-msg="Vui lòng nhập email">
+                            <small class="error-msg"></small>
+                        </div>
+                        <label class="flex center-ver gap-10">
+                            <input type="checkbox">
+                            <span>Email me with news and offers</span>
+                        </label>
+
+
+                        <h3>Delivery</h3>
+
+                        <div class="form-group flex flex-col">
+                            <div class="custom-select flex center-ver">
+                                <select name="country" required data-msg="Chọn quốc gia">
+                                    <option value="">Country / Region</option>
+                                    <option>United States</option>
+                                    <option>Vietnam</option>
+                                </select>
+                            </div>
+                            <small class="error-msg"></small>
+                        </div>
+
+
+                        <div class="flex gap-10">
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="first_name" placeholder="First name" required
+                                    data-msg="Nhập tên">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="last_name" placeholder="Last name" required data-msg="Nhập họ">
+                                <small class="error-msg"></small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group flex flex-col">
+                            <input type="text" name="address" placeholder="Address" required data-msg="Nhập địa chỉ">
+                            <small class="error-msg"></small>
+                        </div>
+
+
+                        <div class="flex gap-10">
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="city" placeholder="City" required data-msg="Nhập city">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group flex flex-col flex-1">
+                                <div class="custom-select flex center-ver">
+                                    <select name="state" required data-msg="Chọn state">
+                                        <option value="">State</option>
+                                        <option>California</option>
+                                        <option>Texas</option>
+                                    </select>
+                                </div>
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="zip" placeholder="ZIP code" required data-msg="Nhập zip">
+                                <small class="error-msg"></small>
+                            </div>
+
+                        </div>
+
+
+                        <p>Phone</p>
+                        <div class="form-group flex flex-col">
+                            <input type="tel" name="phone" placeholder="Phone" required data-msg="Nhập số điện thoại">
+                            <small class="error-msg"></small>
+                        </div>
+
+
+                        <div class="checkout-payment__container flex center-ver">
+                            <h3>Payment</h3>
+                            <div class="checkout-payment__logo flex gap-10 flex-wrap">
+                                <img src="./img/payment/amex.svg" alt="">
+                                <img src="./img/payment/applepay.svg" alt="">
+                                <img src="./img/payment/mastercard.svg" alt="">
+                                <img src="./img/payment/visa.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="form-group flex flex-col">
+                            <input type="text" name="card_number" placeholder="Card number" required
+                                data-msg="Nhập số thẻ">
+                            <small class="error-msg"></small>
+                        </div>
+
+
+                        <div class="flex gap-10">
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="card_exp" placeholder="Expiration date (MM/YY)" required
+                                    data-msg="Nhập ngày hết hạn">
+                                <small class="error-msg"></small>
+                            </div>
+
+                            <div class="form-group flex flex-col flex-1">
+                                <input type="text" name="card_cvv" placeholder="Security code" required
+                                    data-msg="Nhập CVV">
+                                <small class="error-msg"></small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group flex flex-col">
+                            <input type="text" name="card_name" placeholder="Name on card" required
+                                data-msg="Nhập tên trên thẻ">
+                            <small class="error-msg"></small>
+                        </div>
+                        <label class="flex center-ver gap-10">
+                            <input type="checkbox">
+                            <span>Use shipping address as billing address</span>
+                        </label>
+
+
+                        <button type="submit"
+                            class="btn-custom bg-primary text-color-white cursor-pointer checkout-btn">
+                            Pay now
+                        </button>
+
+                    </form>
+                </div>
+                <div class="checkout-summary bg-gray flex flex-col gap-20">
+                    <div class=" checkout-item bg-white flex center-ver gap-10">
+                        <img class="checkout-item__image" width="60" src="./img/product/pack_banh_trang_abi_185x.webp"
+                            alt="">
+                        <div class="flex flex-col flex-1 gap-10 checkout-item__content">
+                            <span>Banh phong tom Anh Kua - goi 500g</span>
+                            <span>$11.99</span>
+                        </div>
+                    </div>
+                    <div class="flex jus-content">
+                        <span>Subtotal</span>
+                        <span>$11.99</span>
+                    </div>
+                    <div class="flex jus-content">
+                        <span>Shipping</span>
+                        <span>Enter shipping address</span>
+                    </div>
+                    <div class="flex jus-content">
+                        <strong>Total</strong>
+                        <strong>$11.99</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

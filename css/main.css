@@ -1042,6 +1042,34 @@ p {
     filter: brightness(1.1);
 }
 
+/* css checkout shopping page */
+.checkout-form,
+.checkout-summary {
+    width: calc(50% - 20px);
+    padding: 10px;
+}
+
+.checkout-btn {
+    width: fit-content;
+    min-height: 44px;
+    padding: 0px 20px;
+    border: transparent;
+}
+
+.checkout-payment__container h3 {
+    font-size: calc(var(--font-size-base) + 4px);
+    flex-grow: 1;
+}
+
+.checkout-payment__logo {
+    width: 40%;
+}
+
+.checkout-payment__logo img {
+    max-height: 32px;
+    width: fit-content;
+}
+
 /* css contact */
 .contact-title {
     font-size: calc(var(--font-size-base) + 4px);
@@ -1318,7 +1346,7 @@ p {
     padding: 0px 10px 20px;
 }
 
-.cate-item:hover .cate-item__content{
+.cate-item:hover .cate-item__content {
     border: 1px solid var(--primary-color);
 }
 
@@ -1329,11 +1357,11 @@ p {
     transition: border 0.6s ease;
 }
 
-.cate-item__content img{
+.cate-item__content img {
     border-radius: 10px;
 }
 
-.cate-item__content p{
+.cate-item__content p {
     font-weight: bold;
     font-size: calc(var(--font-size-base) + 4px);
 }
@@ -1950,11 +1978,11 @@ p {
     flex-direction: row !important;
 }
 
-.collection-container .row .product-name{
+.collection-container .row .product-name {
     text-align: left;
 }
 
-.collection-container .row .product-price{
+.collection-container .row .product-price {
     justify-content: left;
 }
 
@@ -1967,18 +1995,29 @@ p {
     justify-content: left;
 }
 
+.custom-select,
 .custom-item__padding {
     padding: 5px 15px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
     min-width: 100px;
 }
 
+.custom-item__padding {
+    border-radius: 50px;
+}
+
+.custom-select {
+    min-height: 44px;
+    border-radius: 10px;
+}
+
+.custom-select select,
 .custom-item__padding select {
     border: transparent;
     width: 100%;
 }
 
+.custom-select select:focus,
 .custom-item__padding select:focus {
     outline: none;
     box-shadow: none;
@@ -2362,6 +2401,12 @@ p {
         width: calc(100% / 2 - 10px);
     }
 
+    .checkout-container {
+        flex-direction: column-reverse;
+    }
+
+    .checkout-form,
+    .checkout-summary,
     .quickview-content,
     .quickview-gallery {
         width: 100%;
